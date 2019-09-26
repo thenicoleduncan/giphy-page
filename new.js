@@ -64,9 +64,10 @@ $(document).ready(function () {
             });
     };
 
-    $(".topic-button").on("click", function () {
+    $("#buttons-go-here").on("click", ".topic-button", function () {
         $("#gifs-appear-here").empty();
         something = $(this).attr("data-topics");
+        console.log(something);
         callAjax();
     });
 
@@ -90,6 +91,25 @@ $(document).ready(function () {
 
     });
 
+    $(document).on("click", "#search-button", function (event) {
+
+        event.preventDefault();
+        something = $("#search-form").val();
+
+        console.log(something);
+
+        topicBtn = $("<button>");
+
+        topicBtn.addClass("topic-button topic topic-button-color");
+
+        topicBtn.attr("data-topics", something);
+
+        topicBtn.text(something);
+
+        $("#buttons-go-here").append(topicBtn);
+
+
+    });
 
 
 
