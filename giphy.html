@@ -7,29 +7,72 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="giphy.css">
-    <link rel="stylesheet" href="giphy.js">
-    <script src="giphy.js"></script>
+    <!-- <link rel="application/javascript" href="giphy.js"> -->
+    <!-- <script src="giphy.js"></script> -->
 </head>
 
 
 <body>
 
-    <button data-topic="rainbows">rainbows</button>
-    <button data-topic="popcorn">popcorn</button>
-    <button data-topic="icecream">icecream</button>
-    <button data-topic="candy">candy</button>
-    <button data-topic="christmas">christmas</button>
-    <button data-topic="happiness">happiness</button>
+    <div id="buttons-go-here"></div>
 
-    <div id="gifs-appear-here">
-    </div>
+    <div id="gifs-appear-here"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript"></script>
-    
-</body >
-    
 
-    
+    <script>
+        $(document).ready(function () {
 
-</html >
+            // my array of strings, called topics
+            let topics = ["rainbows", "popcorn", "icecream", "candy", "christmas", "happiness"];
+
+            // Your app should take the topics in this array and create buttons in your HTML.
+            //    * Try using a loop that appends a button for each string in the array.
+            for (var i = 0; i < topics.length; i++) {
+
+                var topicBtn = $("<button>");
+
+                topicBtn.addClass("topic-button topic topic-button-color");
+
+                topicBtn.attr("data-topics", topics[i]);
+
+                topicBtn.text(topics[i]);
+
+                $("#buttons-go-here").append(topicBtn);
+                console.log(topics[i]);
+
+            };
+
+            $(".topic-button").on("click", function () {
+
+                // When the user clicks on a button, the page should grab 10 static, non - animated gif images from the 
+                // GIPHY API and place them on the page.
+                alert(`You just clicked me!`);
+                
+                
+
+                // When the user clicks one of the still GIPHY images, the gif should animate.If the user clicks the gif again, 
+                // it should stop playing.
+
+                // Under every gif, display its rating(PG, G, so on).
+                //    * This data is provided by the GIPHY API.
+                //    * Only once you get images displaying with button presses should you move on to the next step.
+
+            });
+
+
+
+
+
+            // Add a form to your page that takes a value from a user input box and adds it to your`topics` array.
+            // Then make a function call that takes each topic in the array and remakes the buttons on the page.
+
+        });
+    </script>
+
+</body>
+
+
+
+
+</html>
