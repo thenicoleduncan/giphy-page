@@ -42,9 +42,8 @@ $(document).ready(function () {
 
                 for (var i = 0; i < results.length; i++) {
 
-                    var topicDiv = $("<div>");
+                    var topicDiv = $("<div class = 'col-4'>");
 
-                    // Under every gif, display its rating(PG, G, so on).
                     var p = $("<p>").text(`Rating: ${results[i].rating.toUpperCase()}`);
 
                     var topicImage = $("<img class='gif'>");
@@ -107,6 +106,8 @@ $(document).ready(function () {
         topicBtn.text(something);
 
         $("#buttons-go-here").append(topicBtn);
+
+        $("#search-form").val("");
 
 
     });
