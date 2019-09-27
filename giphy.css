@@ -1,11 +1,7 @@
-/* .gif {
-    width: 25%;
-} */
-
-/* body {
-    background-image: url("/rainbow.jpg");
+.jumbotron {
+    font-family: 'Satisfy', cursive;
 };
 
-.jumbotron {
-color: lightblue !important;
-}; */
+.topic {
+    font-family: 'Satisfy', cursive;
+};

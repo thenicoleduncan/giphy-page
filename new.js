@@ -8,7 +8,7 @@ $(document).ready(function () {
 
             var topicBtn = $("<button>");
 
-            topicBtn.addClass("topic-button topic topic-button-color bg-info text-light");
+            topicBtn.addClass("topic-button topic topic-button-color btn btn-warning text-light rounded");
 
             topicBtn.attr("data-topics", topics[i]);
 
@@ -99,7 +99,7 @@ $(document).ready(function () {
 
         topicBtn = $("<button>");
 
-        topicBtn.addClass("topic-button topic topic-button-color bg-info text-light");
+        topicBtn.addClass("topic-button topic topic-button-color btn btn-warning text-light rounded");
 
         topicBtn.attr("data-topics", something);
 
