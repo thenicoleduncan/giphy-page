@@ -12,7 +12,6 @@ $(document).ready(function () {
 
             topicBtn.attr("data-topics", topics[i]);
 
-
             topicBtn.text(topics[i]);
 
             $("#buttons-go-here").append(topicBtn);
@@ -43,15 +42,15 @@ $(document).ready(function () {
                 for (var i = 0; i < results.length; i++) {
 
                     var topicDiv = $("<div class= 'col-4'>");
-
-                    var p = $("<p class= 'text-light'>").text(`Rating: ${results[i].rating.toUpperCase()}`);
                     
+                    var p = $("<p class= 'text-light'>").text(`Rating: ${results[i].rating.toUpperCase()}`);
+
                     var topicImage = $("<img class='gif'>");
                     topicImage.attr("src", results[i].images.fixed_height_still.url);
                     topicImage.attr("data-animate", results[i].images.fixed_height.url);
                     topicImage.attr("data-still", results[i].images.fixed_height_still.url);
                     topicImage.attr("data-state", "still");
-                    
+
                     topicDiv.append(p);
                     topicDiv.append(topicImage);
 
@@ -84,7 +83,6 @@ $(document).ready(function () {
             $(this).attr("data-state", "still");
         }
 
-
     });
 
     $(document).on("click", "#search-button", function (event) {
@@ -94,25 +92,22 @@ $(document).ready(function () {
         console.log(something);
 
         if (something === "") {
-            
+
         } else {
 
             topicBtn = $("<button>");
-    
+
             topicBtn.addClass("topic-button topic topic-button-color btn-warning text-light rounded");
-    
+
             topicBtn.attr("data-topics", something);
-    
+
             topicBtn.text(something);
-    
+
             $("#buttons-go-here").append(topicBtn);
-    
+
             $("#search-form").val("");
         };
 
-
     });
-
-
 
 });
