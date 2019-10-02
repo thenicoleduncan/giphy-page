@@ -8,7 +8,7 @@ $(document).ready(function () {
 
             var topicBtn = $("<button>");
 
-            topicBtn.addClass("topic-button topic topic-button-color btn-warning text-light rounded");
+            topicBtn.addClass("topic-button topic m-1 topic-button-color btn-warning text-light rounded");
 
             topicBtn.attr("data-topics", topics[i]);
 

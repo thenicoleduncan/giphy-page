@@ -6,3 +6,7 @@
 .topic-button {
     margin: 3px !important;
 };
+
+#gifs-appear-here {
+min-width: 99%;
+};
